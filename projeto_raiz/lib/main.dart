@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        //home -> roda, ezte parâmetro chama o layout principal
+        //home -> roda, este parâmetro chama o widget que será exibido na tela, este parâmetro é obrigatório
         home: LayoutPrincipal());
   }
 }
@@ -21,15 +21,19 @@ class MyApp extends StatelessWidget {
 class LayoutPrincipal extends StatefulWidget {
   LayoutPrincipal({Key key}) : super(key: key);
 
-  //Este método que cria o estado do layout para apresentação na tela
+  //É a partir do método createState que é chamado a classe que cria os widgets na tela.
+
   @override
-  LayoutPrincipalState createState() => LayoutPrincipalState();
+  CriaWidgetsLayout createState() => CriaWidgetsLayout();
 }
 
-//A classe abaixo cria o que será apresentado na tela
-class LayoutPrincipalState extends State<LayoutPrincipal> {
+//A classe abaixo cria os Widgets que serão apresentados na tela
+class CriaWidgetsLayout extends State<LayoutPrincipal> {
+  //Método construtor de widget
   Widget build(BuildContext context) {
+    //Definindo o tipo de Widget pai que irá retornar o layout criado a partir dos wigets filho.
     return Scaffold(
+      //Widgets filho
       appBar: AppBar(
         title: const Text(
           'Hellow Word',
