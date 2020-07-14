@@ -1,6 +1,6 @@
-# flutter_app
+# projeto_raiz
 
-Projeto hellow word
+A new Flutter project.
 
 ## Getting Started
 
