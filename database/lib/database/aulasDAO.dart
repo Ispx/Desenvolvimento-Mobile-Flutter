@@ -38,21 +38,21 @@ class aulasDAO {
 
   deleteById(int id) {
     open().then((database) {
-      //nome da tabela, nome da coluna de referência a ser deletado, valor presenta na coluna a ser deletadoo
+      //nome da tabela, nome da coluna de referência a ser deletado, valor presente na coluna a ser deletadoo
       database.delete('aulas', where: 'id = ?', whereArgs: [id]);
     });
   }
 
   deleteByStatus(int status) {
     open().then((database) {
-      //nome da tabela, nome da coluna de referência a ser deletado, valor presenta na coluna a ser deletado
+      //nome da tabela, nome da coluna de referência a ser deletado, valor presente na coluna a ser deletado
       database.delete('aulas', where: 'status = ?', whereArgs: [status]);
     });
   }
 
   deleteByName(String name) {
     open().then((database) {
-      //nome da tabela, nome da coluna de referência a ser deletado, valor presenta na coluna a ser deletado
+      //nome da tabela, nome da coluna de referência a ser deletado, valor presente na coluna a ser deletado
       database.delete('aulas', where: 'nome = ?', whereArgs: [name]);
     });
   }
